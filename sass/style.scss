@@ -78,7 +78,7 @@ header {
 	.hero-img {
 		position: relative;
 		height: 100vh;
-		background-image: url('../img/hero-img.jpg');
+		background-image: url('../img/hero.jpg');
 		background-size: cover;
 		background-position: center;
 		background-attachment: fixed;
@@ -88,7 +88,7 @@ header {
 		position: absolute;
 		width: 100%;
 		height: 100%;
-		background-color: rgba(0, 0, 0, 0.3);
+		background-color: rgba(0, 0, 0, 0.7);
 		z-index: -10;
 	}
 	.hero-text {
@@ -101,6 +101,16 @@ header {
 		text-align: center;
 		z-index: 5;
 		text-shadow: 0 0 15px black;
+	}
+	.fa-solid {
+		position: absolute;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		bottom: 5%;
+		font-size: 30px;
+		color: $white;
+		text-shadow: 0 0 4px $white;
+		animation: arrowdown 1s alternate infinite;
 	}
 	.tracking-in-expand-h1,
 	.tracking-in-expand-p {
@@ -150,5 +160,15 @@ header {
 	}
 	100% {
 		opacity: 1;
+	}
+}
+
+// My own animations
+@keyframes arrowdown {
+	from {
+		transform: translateY(0);
+	}
+	to {
+		transform: translateY(50%);
 	}
 }
