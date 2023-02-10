@@ -18,15 +18,15 @@
 <body>
 
     <nav>
-        <p class="navname">maciej grzechowiak</p>
+        <a href="#home" class="navname">maciej grzechowiak</a>
         <a class="navitems border nav-info" href="#info">Dane</a>
         <a class="navitems border nav-education" href="#">Wykształcenie</a>
         <a class="navitems border nav-work-experience" href="#">Doświadczenie zawodowe</a>
         <a class="navitems border nav-aboutme" href="#">O mnie</a>
     </nav>
 
-    <header>
-        <div class="hero-img">
+    <header id="home">
+        <div data- class="hero-img">
             <div class="hero-shadow"></div>
             <div class="hero-text">
                 <h1 class="tracking-in-expand-h1">witam na mojej stronie cv</h1>
@@ -35,6 +35,47 @@
             </div>
         </div>
     </header>
+
+    <main>
+        <h1>dane</h1>
+        <hr>
+        <section class="info" id="info">
+
+            <div class="info-box personal">
+                <i class="fa-solid fa-address-card"></i>
+                <p class="head">Maciej Grzechowiak</p>
+                <hr>
+                <i class="fa-solid fa-location-dot"></i>
+                <p class="head">Trzemeszno</p>
+            </div>
+
+            <div class="info-box contact">
+                <i class="fa-solid fa-envelope"></i>
+                <a href="mailto:maciejg43@gmail.com">
+                    <p class="head">maciejg43@gmail.com</p>
+                </a>
+                <hr>
+                <i class="fa-solid fa-phone"></i>
+                <a href="tel:+48605890438">
+                    <p class="head">+48 605 890 438</p>
+                </a>
+            </div>
+
+            <div class="info-box socialmedia">
+                <i class="fa-brands fa-facebook"></i>
+                <a href="https://www.facebook.com/toyamvcieq" target="_blank">
+                    <p class="head">Maciej Grzechowiak</p>
+                </a>
+                <hr>
+                <i class="fa-brands fa-instagram"></i>
+                <a href="https://www.instagram.com/toyamvcieq/" target="_blank">
+                    <p class="head">toyamvcieq</p>
+                </a>
+            </div>
+
+            </div>
+        </section>
+    </main>
 </body>
 
 </html>

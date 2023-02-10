@@ -6,6 +6,10 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   position: relative;
   font-family: "Montserrat", sans-serif;
@@ -13,14 +17,13 @@ body {
 }
 
 nav {
-  position: absolute;
+  position: fixed;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   width: 100%;
   height: 15vh;
-  background-color: #7f53ac;
-  background-image: linear-gradient(315deg, #7f53ac 0%, #5d05b4 20%, #647dee 74%);
+  background-color: royalblue;
   border-bottom: 2px solid #fff;
   z-index: 1;
 }
@@ -40,7 +43,8 @@ nav .navname {
   justify-content: flex-start;
   letter-spacing: 5px;
 }
-nav .navitems {
+nav .navitems,
+nav .navname {
   transition: all 0.8s;
   justify-content: flex-end;
   color: #fff;
@@ -49,7 +53,8 @@ nav .navitems {
   transition: 0.4s, background-position 0s;
   border-bottom: 1px solid transparent;
 }
-nav .navitems:hover {
+nav .navitems:hover,
+nav .navname:hover {
   --p: 100%;
   color: #fff;
   box-shadow: 5px 5px 0px rgb(56, 173, 219);
@@ -57,6 +62,7 @@ nav .navitems:hover {
 }
 
 header {
+  position: relative;
   color: #fff;
 }
 header h1 {
@@ -87,17 +93,19 @@ header .hero-text {
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   height: 100%;
   padding: 10px;
   text-align: center;
   z-index: 5;
-  text-shadow: 0 0 15px black;
+  text-shadow: 0 0 25px royalblue;
 }
-header .fa-solid {
+header i {
+  transition: text-shadow 0.7s;
   position: absolute;
   left: 50%;
   transform: translate(-50%, -50%);
-  bottom: 5%;
+  bottom: 5vh;
   font-size: 30px;
   color: #fff;
   text-shadow: 0 0 4px #fff;
@@ -112,6 +120,78 @@ header .tracking-in-expand-h1 {
 }
 header .tracking-in-expand-p {
   animation: tracking-in-expand 0.7s 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+}
+header i:hover {
+  text-shadow: 0 0 25px #fff;
+}
+
+main {
+  width: 100%;
+}
+main h1 {
+  text-align: center;
+  text-transform: uppercase;
+  margin: 40px;
+}
+main hr {
+  width: 25%;
+  margin: 0 auto;
+}
+main .info {
+  display: flex;
+  align-items: flex-start;
+  align-content: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 50vh;
+}
+main .info .info-box {
+  position: relative;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+  transition: all 0.8s;
+  margin: 0 auto;
+  padding: 30px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+main .info .info-box a {
+  text-decoration: none;
+  color: black;
+  transition: all 0.5s;
+}
+main .info .info-box a:hover {
+  color: royalblue;
+}
+main .info .info-box .head {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 20px;
+}
+main .info .info-box i {
+  transition: all 0.8s;
+  color: #fff;
+  text-shadow: 0 0 5px #000;
+  font-size: 26px;
+  margin: 15px;
+}
+main .info .info-box i:hover {
+  color: #000;
+  text-shadow: 0 0 5px #fff;
+}
+main .info .info-box:hover {
+  background-color: rgba(0, 0, 0, 0.22);
+  color: #fff;
+}
+main .info .info-box:hover a {
+  color: #fff;
+}
+main .info .info-box:hover a:hover {
+  color: royalblue;
 }
 
 /* ----------------------------------------------
